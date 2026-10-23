@@ -1,0 +1,38 @@
+---
+interface Props {
+  years?: string;
+  title: string;
+  org?: string;
+  location?: string;
+  note?: string;
+}
+const { years, title, org, location, note } = Astro.props;
+---
+<div class="entry">
+  <p class="muted">{years}</p>
+  <div>
+    <p>{title}</p>
+    {org && <p class="muted">{org}</p>}
+    {location && <p class="muted">{location}</p>}
+    {note && <p class="muted">{note}</p>}
+  </div>
+</div>
+
+<style>
+  .entry {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 24px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  p { margin: 0 0 4px; }
+  .muted { color: var(--muted); }
+
+  @media (max-width: 640px) {
+    .entry {
+      grid-template-columns: 1fr;
+      gap: 4px;
+    }
+  }
+</style>

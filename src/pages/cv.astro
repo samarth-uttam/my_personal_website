@@ -1,0 +1,36 @@
+---
+import Base from "../layouts/Base.astro";
+import CvSection from "../components/cv/CvSection.astro";
+import { cv } from "../data/cv.js";
+---
+<Base title="CV — Samarth Uttam">
+  <div class="container">
+    <div class="top">
+      <h1>Curriculum Vitae</h1>
+      {cv.pdf && <a href={cv.pdf} download>Download PDF</a>}
+    </div>
+    {cv.sections.map((section) => <CvSection {...section} />)}
+  </div>
+</Base>
+
+<style>
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 96px 0 48px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .top a {
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--text);
+    transition: opacity 0.2s;
+  }
+  .top a:hover { opacity: 0.4; }
+</style>

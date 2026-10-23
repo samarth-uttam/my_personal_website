@@ -1,0 +1,42 @@
+---
+import CvEntry from "./CvEntry.astro";
+
+interface Props {
+  title: string;
+  entries: { years?: string; title: string; org?: string; location?: string; note?: string }[];
+}
+const { title, entries } = Astro.props;
+---
+<section>
+  <h2>{title}</h2>
+  <div class="entries">
+    {entries.map((entry) => <CvEntry {...entry} />)}
+  </div>
+</section>
+
+<style>
+  section {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+  .entries {
+    border-top: 1px solid var(--line);
+  }
+  h2 {
+    margin: 0;
+    padding-top: 28px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  @media (max-width: 800px) {
+    section {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+  }
+</style>

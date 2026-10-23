@@ -5,6 +5,5 @@ export const site = {
     { label: "Research", href: "/research" },
     { label: "Activities", href: "/activities" },
     { label: "CV", href: "/cv" },
-    { label: "Contact", href: "/#contact" },
-  ],
+    { label: "Contact", href: "#contact" },  ],
 };

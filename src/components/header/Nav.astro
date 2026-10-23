@@ -1,0 +1,44 @@
+---
+interface Props {
+  items: { label: string; href: string }[];
+}
+const { items } = Astro.props;
+const current = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+<nav>
+  <ul>
+    {items.map((item) => (
+      <li>
+        <a href={item.href} aria-current={item.href === current ? "page" : undefined}>
+          {item.label}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+ ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+  a {
+    padding-bottom: 4px;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s;
+  }
+ a:hover {
+  opacity: 0.4;
+}
+  a[aria-current="page"] {
+    border-bottom-color: var(--text);
+  }
+  @media (max-width: 640px) {
+    ul { gap: 12px 20px; }
+  }
+</style>

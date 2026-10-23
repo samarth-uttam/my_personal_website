@@ -1,20 +1,50 @@
 ---
-interface Props {
+export interface Props {
   years?: string;
   title: string;
   org?: string;
   location?: string;
-  note?: string;
+  note?: string | string[];
+  links?: { label?: string; href: string }[];
+  plain?: boolean;
 }
-const { years, title, org, location, note } = Astro.props;
+const { years, title, org, location, note, links = [], plain = false } = Astro.props;
+const notes = Array.isArray(note) ? note : note ? [note] : [];
+const isExternal = (href: string) => href.startsWith("http");
+const arrowLink = links.find((link) => !link.label);
+const textLinks = links.filter((link) => link.label);
 ---
-<div class="entry">
+<div class:list={["entry", { plain }]}>
   <p class="muted">{years}</p>
   <div>
-    <p>{title}</p>
+    <p class="title">
+      {title}
+      {arrowLink && (
+        <a
+          class="arrow"
+          href={arrowLink.href}
+          target={isExternal(arrowLink.href) ? "_blank" : undefined}
+          rel={isExternal(arrowLink.href) ? "noopener" : undefined}
+          aria-label={`Open page of ${title}`}
+        >↗</a>
+      )}
+    </p>
     {org && <p class="muted">{org}</p>}
     {location && <p class="muted">{location}</p>}
-    {note && <p class="muted">{note}</p>}
+    {notes.map((line) => <p class="muted">{line}</p>)}
+    {textLinks.length > 0 && (
+      <p class="links">
+        {textLinks.map((link) => (
+          <a
+            href={link.href}
+            target={isExternal(link.href) ? "_blank" : undefined}
+            rel={isExternal(link.href) ? "noopener" : undefined}
+          >
+            {link.label} ↗
+          </a>
+        ))}
+      </p>
+    )}
   </div>
 </div>
 
@@ -26,8 +56,29 @@ const { years, title, org, location, note } = Astro.props;
     padding: 28px 0;
     border-bottom: 1px solid var(--line);
   }
+  .plain {
+    padding: 10px 0;
+    border-bottom: none;
+  }
+  .plain .title { font-weight: 600; }
   p { margin: 0 0 4px; }
   .muted { color: var(--muted); }
+
+  .arrow {
+    margin-left: 6px;
+    transition: opacity 0.2s;
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  .links a {
+    transition: opacity 0.2s;
+  }
+  .arrow:hover,
+  .links a:hover { opacity: 0.4; }
 
   @media (max-width: 640px) {
     .entry {

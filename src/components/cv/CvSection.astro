@@ -1,16 +1,18 @@
 ---
 import CvEntry from "./CvEntry.astro";
+import type { Props as Entry } from "./CvEntry.astro";
 
 interface Props {
   title: string;
-  entries: { years?: string; title: string; org?: string; location?: string; note?: string }[];
+  entries: Entry[];
+  plain?: boolean;
 }
-const { title, entries } = Astro.props;
+const { title, entries, plain = false } = Astro.props;
 ---
 <section>
   <h2>{title}</h2>
-  <div class="entries">
-    {entries.map((entry) => <CvEntry {...entry} />)}
+  <div class:list={["entries", { plain }]}>
+    {entries.map((entry) => <CvEntry {...entry} plain={plain} />)}
   </div>
 </section>
 
@@ -23,6 +25,10 @@ const { title, entries } = Astro.props;
   }
   .entries {
     border-top: 1px solid var(--line);
+  }
+  .entries.plain {
+    border-top: none;
+    padding-top: 18px;
   }
   h2 {
     margin: 0;

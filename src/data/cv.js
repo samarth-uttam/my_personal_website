@@ -180,7 +180,7 @@ export const cv = {
       entries: [
         { years: "English", title: "Proficient", note: "IELTS 7.5" },
         { years: "Hindi", title: "Native" },
-         { years: "German", title: "A 1.1" },
+         { years: "German", title: "A1.1" },
       ],
     },
       {

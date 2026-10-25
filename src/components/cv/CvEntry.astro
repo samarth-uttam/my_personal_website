@@ -16,8 +16,8 @@ const textLinks = links.filter((link) => link.label);
 ---
 <div class:list={["entry", { plain }]}>
   <p class="muted">{years}</p>
-  <div>
-    <p class="title">
+  <div class="details">
+        <p class="title">
       {title}
       {arrowLink && (
         <a
@@ -63,6 +63,11 @@ const textLinks = links.filter((link) => link.label);
   .plain .title { font-weight: 600; }
   p { margin: 0 0 4px; }
   .muted { color: var(--muted); }
+  
+
+    .details p:not(.title) {
+    font-size: 0.9rem;
+  }
 
   .arrow {
     margin-left: 6px;

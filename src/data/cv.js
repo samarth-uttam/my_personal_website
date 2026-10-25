@@ -5,32 +5,34 @@ export const cv = {
       title: "Education",
       entries: [
         {
-          years: "2020–2022",
-          title: "MPhil Integrative Systems and Design",
+          years: "2022",
+          title: "MPhil, Integrative Systems and Design",
           org: "The Hong Kong University of Science and Technology",
           location: "Hong Kong",
           note: [
             "Thesis: On the Planning of Handling Large Arbitrarily Curved Glass Sheets",
-            "Postgraduate Studentship (PGS)",
+            "Awards: Postgraduate Studentship (PGS)",
           ],
           links: [
-            { label: "Thesis", href: "/thesis-mphil.pdf" },
+            { label: "Thesis", href: "https://repository.hkust.edu.hk/ir/bitstream/1783.1-134870/1/991013142458003412.pdf" },
             // { label: "Project", href: "/research/curved-glass-handling" },
           ],
         },
         {
-          years: "2019–2020",
-          title: "MSc Mechanical Engineering",
+          years: "2020",
+          title: "MSc, Mechanical Engineering",
           org: "The Hong Kong University of Science and Technology",
           location: "Hong Kong",
-          note: "Project: Self-navigation system for the Segway Loomo robot for property management",
+          note: "Thesis: Self-navigation system for the Segway Loomo robot for property management",
           // links: [{ label: "Project", href: "/research/loomo-navigation" }],
         },
         {
-          years: "2014–2018",
-          title: "BTech Mechanical Engineering",
+          years: "2018",
+          title: "BTech, Mechanical Engineering",
           org: "Indian Institute of Information Technology Jabalpur",
-          location: "Jabalpur, India",
+          location: "India",
+          note: ["Visiting Student : Indian Institute of Technology, Delhi", 
+                "Project : Design of an All Terrain Vehicle"]
         },
       ],
     },
@@ -43,8 +45,8 @@ export const cv = {
           org: "D-Shape Limited · Research Talent Hub @ HKSTP",
           location: "Hong Kong",
           note: [
-            "Structural systems of the D-Shape Sync 2x4 printer: lightweight modular aluminium trusses",
-            "Slicing software and printer control for the Selective Cement Activation (SCA) process",
+            "· Structural systems of the D-Shape Sync 2x4 printer: lightweight modular aluminium trusses",
+            "· Slicing software and printer control for the Selective Cement Activation (SCA) process",
           ],
           // links: [{ label: "Project", href: "/research/d-shape" }],
         },
@@ -54,9 +56,9 @@ export const cv = {
           org: "Precision Microdrives Ltd.",
           location: "Hong Kong",
           note: [
-            "Assembly jigs and fixtures using CAD, FEA and GD&T",
-            "Arduino-based test systems with Python interfaces",
-            "Validation, GR&R studies and IQ/OQ/PQ documentation",
+            "· Assembly jigs and fixtures using CAD, FEA and GD&T",
+            "· Arduino-based test systems with Python interfaces",
+            "· Validation, GR&R studies and IQ/OQ/PQ documentation",
           ],
         },
       ],
@@ -65,13 +67,13 @@ export const cv = {
       title: "Academic Positions",
       entries: [
         {
-          years: "2025–now",
+          years: "2025 – current",
           title: "Research Associate",
           org: "Institute for Computational Design and Construction (ICD), University of Stuttgart",
           location: "Stuttgart, Germany",
           note: [
             "Project: Autonomous Manufacturing of Integrative Services",
-            "Heating module and die assembly for a compact HDPE pipe extrusion unit for robotic underground construction",
+            "· Heating module and die assembly for a compact HDPE pipe extrusion unit for robotic underground construction",
           ],
           // links: [{ label: "Project", href: "/research/hdpe-pipe-extrusion" }],
         },
@@ -81,8 +83,8 @@ export const cv = {
           org: "Indian Institute of Technology Kanpur",
           location: "Kanpur, India",
           note: [
-            "Feedback-based hydraulic braking system for a gas pipeline inspection robot",
-            "In collaboration with the Gas Authority of India Limited",
+            "· Feedback-based hydraulic braking system for a gas pipeline inspection robot",
+            "· In collaboration with the Gas Authority of India Limited",
           ],
           // links: [{ label: "Project", href: "/research/pipe-inspection-robot" }],
         },
@@ -91,7 +93,7 @@ export const cv = {
           title: "Research Intern",
           org: "Indian Institute of Technology Delhi",
           location: "New Delhi, India",
-          note: "Chassis and belt-driven transmission redesign of an all-terrain vehicle for disaster management",
+          note: "· Chassis and belt-driven transmission redesign of an all-terrain vehicle for disaster management",
           // links: [{ label: "Project", href: "/research/all-terrain-vehicle" }],
         },
       ],
@@ -139,7 +141,7 @@ export const cv = {
       title: "Service",
       entries: [
         {
-          years: "2025–now",
+          years: "2025 – current",
           title: "Member of the General Assembly",
           org: "IntCDC Early Career Board, University of Stuttgart",
         },
@@ -178,6 +180,7 @@ export const cv = {
       entries: [
         { years: "English", title: "Proficient", note: "IELTS 7.5" },
         { years: "Hindi", title: "Native" },
+         { years: "German", title: "A 1.1" },
       ],
     },
       {
@@ -205,7 +208,7 @@ export const cv = {
           title: "Samuel Leder",
           org: "Institute for Computational Design and Construction (ICD)",
           location: "University of Stuttgart, Germany",
-          // links: [{ href: "https://…" }],
+          links: [{ href: "https://www.icd.uni-stuttgart.de/team/Leder/" }],
         },
       ],
     },

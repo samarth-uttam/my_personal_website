@@ -10,29 +10,31 @@ export const intro = {
     { label: "Role", value: "Research Associate" },
     { label: "Institute", value: ["Institute for Computational Design and Construction (ICD)", "University of Stuttgart"] },
     { label: "Focus", value: "Construction robotics" },
-    { label: "Based in", value: "Stuttgart, Germany" },
+    { label: "Cluster of Excellence", value: ["IntCDC", " AP55 · Autonomous Manufacturing of Integrative Services"] },
+    // { label: "Based in", value: "Stuttgart, Germany" },
   ],
 
   blocks: [
     {
       label: "About",
       text: [
-        "I am a mechanical engineer and research associate at the Institute for Computational Design and Construction (ICD), University of Stuttgart. My work sits between mechanical design, fabrication and robotics: developing the hardware that construction robots depend on, from process equipment and tooling to the machines themselves, and testing it at full scale.",
-        "Before Stuttgart, I spent six years in Hong Kong. At HKUST, I completed an MSc and an MPhil, working on robot navigation and the robotic handling of large curved glass sheets. I then moved to industry, designing assembly fixtures and test systems at Precision Microdrives, and printer structures and slicing software at D-Shape.",
+        "I am a mechanical engineer and research associate at the Institute for Computational Design and Construction (ICD), University of Stuttgart. My work bridges mechanical systems, digital fabrication, and robotics—focusing on the design, engineering, and full-scale testing of hardware and process tooling that physical robotic construction relies on.",
+        "Before Stuttgart, I spent six years in Hong Kong. At HKUST, I completed an MSc and an MPhil, working on robot navigation and the  handling of large curved glass sheets. I then moved to industry, designing assembly fixtures and test systems at Precision Microdrives, and printer structures and slicing software at D-Shape.",
       ],
     },
     {
       label: "Now",
-      text: "Developing the heating module and die assembly for a compact HDPE pipe extrusion unit for robotic underground construction, as part of the project Autonomous Manufacturing of Integrative Services.",
+      text: "Working on : AP55 - Autonomous Manufacturing of Integrative Services at Institute for Computational Design and Construction (ICD) University of Stuttgart focussing on Fabrication of Integrated Services: Robotic Construction (CRC) for On-Site Production and Installation of Building Systems in Construction and Infrastructure  " ,
       // link: { label: "Project", href: "/research/hdpe-pipe-extrusion" },
     },
     {
       label: "Before",
-      text: "Industrial engineering and 3D printing in Hong Kong · MPhil and MSc at HKUST",
+      text: ["· Industrial engineering and Software development for LFAM - large format additive manufacturing in Hong Kong",
+      "· MPhil and MSc at The Hong Kong University of Science and Technology (HKUST)",]
     },
     {
       label: "Interests",
-      text: "Collective robotic construction · Fabrication processes · Mechanical design · Design computation",
+      text: "Robotic construction · Fabrication processes · Mechanical design · Design computation",
     },
   ],
 };

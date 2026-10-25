@@ -1,0 +1,60 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  project: CollectionEntry<"projects">;
+  number: number;
+}
+const { project, number } = Astro.props;
+const { title, summary, year, type, cover } = project.data;
+const label = String(number).padStart(2, "0");
+---
+<a class="card" href={`/research/${project.id}`}>
+  {cover?.src ? (
+    <img src={cover.src} alt={cover.alt} loading="lazy" />
+  ) : (
+    <div class="placeholder" aria-hidden="true"></div>
+  )}
+  <div class="meta">
+    <span>{label}</span>
+    <span>{type} · {year}</span>
+  </div>
+  <h3>{title}</h3>
+  <p>{summary}</p>
+</a>
+
+<style>
+  .card {
+    display: block;
+  }
+  img,
+  .placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--line);
+    transition: opacity 0.3s;
+  }
+  .card:hover img,
+  .card:hover .placeholder {
+    opacity: 0.8;
+  }
+  .meta {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+  h3 {
+    margin: 6px 0 4px;
+    font-size: 1.15rem;
+    font-weight: 500;
+  }
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+  }
+</style>

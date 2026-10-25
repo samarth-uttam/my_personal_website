@@ -1,0 +1,73 @@
+---
+import ProjectRow from "./ProjectRow.astro";
+
+interface Props {
+  groups: { title: string; text?: string; images: { src?: string; caption: string }[] }[];
+}
+const { groups } = Astro.props;
+---
+{groups.map((group) => (
+  <ProjectRow label={group.title}>
+    {group.text && <p class="text">{group.text}</p>}
+    <div class="images">
+      {group.images.map((image) => (
+        <figure>
+          <button
+            type="button"
+            data-lightbox
+            data-src={image.src}
+            data-caption={image.caption}
+            aria-label={`Open image: ${image.caption}`}
+          >
+            {image.src ? (
+              <img src={image.src} alt={image.caption} loading="lazy" />
+            ) : (
+              <span class="placeholder"></span>
+            )}
+          </button>
+          <figcaption>{image.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </ProjectRow>
+))}
+
+<style>
+  .text {
+    margin: 0 0 24px;
+  }
+  .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 24px 16px;
+  }
+  figure {
+    margin: 0;
+  }
+  button {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: zoom-in;
+  }
+  img,
+  .placeholder {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--line);
+    transition: opacity 0.2s;
+  }
+  button:hover img,
+  button:hover .placeholder {
+    opacity: 0.8;
+  }
+  figcaption {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+</style>

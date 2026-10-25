@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+interface Props {
+  project: CollectionEntry<"projects">;
+}
+const { project } = Astro.props;
+---
+<a class="next" href={`/research/${project.id}`}>
+  <span class="label">Next project</span>
+  <span class="title">{project.data.title} →</span>
+</a>
+
+<style>
+  .next {
+    display: block;
+    margin-top: 120px;
+    padding-top: 32px;
+    border-top: 1px solid var(--text);
+  }
+  .label {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .title {
+    display: block;
+    margin-top: 12px;
+    font-size: clamp(1.5rem, 3.5vw, 2.75rem);
+    font-weight: 300;
+    line-height: 1.15;
+    transition: opacity 0.2s;
+  }
+  .next:hover .title {
+    opacity: 0.4;
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+interface Props {
+  title: string;
+  summary: string;
+  cover?: { src?: string; alt: string };
+}
+const { title, summary, cover } = Astro.props;
+---
+<div class="head">
+  <a class="back" href="/research">← All projects</a>
+  <h1>{title}</h1>
+  <p class="summary">{summary}</p>
+  {cover?.src ? (
+    <img src={cover.src} alt={cover.alt} />
+  ) : (
+    <div class="placeholder" aria-hidden="true"></div>
+  )}
+</div>
+
+<style>
+  .head {
+    padding: 64px 0 48px;
+  }
+  .back {
+    font-size: 0.9rem;
+    color: var(--muted);
+    transition: color 0.2s;
+  }
+  .back:hover {
+    color: var(--text);
+  }
+  h1 {
+    margin: 40px 0 12px;
+    max-width: 24ch;
+    font-size: clamp(2rem, 4.5vw, 3.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+  }
+  .summary {
+    margin: 0 0 48px;
+    max-width: 60ch;
+    font-size: 1.15rem;
+    color: var(--muted);
+  }
+  img,
+  .placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: var(--line);
+  }
+</style>

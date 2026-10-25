@@ -15,7 +15,7 @@ export const cv = {
           ],
           links: [
             { label: "Thesis", href: "https://repository.hkust.edu.hk/ir/bitstream/1783.1-134870/1/991013142458003412.pdf" },
-            // { label: "Project", href: "/research/curved-glass-handling" },
+            { label: "Project", href: "/research/curved-glass-handling" },
           ],
         },
         {
@@ -24,7 +24,7 @@ export const cv = {
           org: "The Hong Kong University of Science and Technology",
           location: "Hong Kong",
           note: "Thesis: Self-navigation system for the Segway Loomo robot for property management",
-          // links: [{ label: "Project", href: "/research/loomo-navigation" }],
+          links: [{ label: "Project", href: "/research/loomo-navigation" }],
         },
         {
           years: "2018",
@@ -48,7 +48,7 @@ export const cv = {
             "· Structural systems of the D-Shape Sync 2x4 printer: lightweight modular aluminium trusses",
             "· Slicing software and printer control for the Selective Cement Activation (SCA) process",
           ],
-          // links: [{ label: "Project", href: "/research/d-shape" }],
+          links: [{ label: "Project", href: "/research/d-shape" }],
         },
         {
           years: "2022–2024",
@@ -75,7 +75,7 @@ export const cv = {
             "Project: Autonomous Manufacturing of Integrative Services",
             "· Heating module and die assembly for a compact HDPE pipe extrusion unit for robotic underground construction",
           ],
-          // links: [{ label: "Project", href: "/research/hdpe-pipe-extrusion" }],
+          links: [{ label: "Project", href: "/research/hdpe-pipe-extrusion" }],
         },
         {
           years: "2019",
@@ -86,7 +86,7 @@ export const cv = {
             "· Feedback-based hydraulic braking system for a gas pipeline inspection robot",
             "· In collaboration with the Gas Authority of India Limited",
           ],
-          // links: [{ label: "Project", href: "/research/pipe-inspection-robot" }],
+          links: [{ label: "Project", href: "/research/pipe-inspection-robot" }],
         },
         {
           years: "2017",
@@ -94,7 +94,7 @@ export const cv = {
           org: "Indian Institute of Technology Delhi",
           location: "New Delhi, India",
           note: "· Chassis and belt-driven transmission redesign of an all-terrain vehicle for disaster management",
-          // links: [{ label: "Project", href: "/research/all-terrain-vehicle" }],
+          links: [{ label: "Project", href: "/research/all-terrain-vehicle" }],
         },
       ],
     },

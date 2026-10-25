@@ -1,0 +1,43 @@
+---
+interface Props {
+  facts: { label: string; value: string | string[] }[];
+}
+const { facts } = Astro.props;
+const lines = (value: string | string[]) => (Array.isArray(value) ? value : [value]);
+---
+<dl>
+  {facts.map((fact) => (
+    <div class="fact">
+      <dt>{fact.label}</dt>
+      {lines(fact.value).map((line) => <dd>{line}</dd>)}
+    </div>
+  ))}
+</dl>
+
+<style>
+  dl {
+    margin: 0;
+  }
+  .fact {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    column-gap: 24px;
+    padding: 6px 0;
+  }
+  dt {
+    color: var(--muted);
+  }
+  dd {
+    grid-column: 2;
+    margin: 0;
+  }
+
+  @media (max-width: 640px) {
+    .fact {
+      grid-template-columns: 1fr;
+    }
+    dd {
+      grid-column: 1;
+    }
+  }
+</style>

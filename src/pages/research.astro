@@ -1,0 +1,79 @@
+---
+import Base from "../layouts/Base.astro";
+import IntroBlock from "../components/intro/IntroBlock.astro";
+import ProjectGrid from "../components/projects/ProjectGrid.astro";
+import ProjectFilter from "../components/projects/ProjectFilter.astro";
+import { research } from "../data/research.js";
+import { getAllProjects } from "../lib/projects.js";
+
+const projects = await getAllProjects();
+const typeOrder = ["Research", "Academic", "Industry", "Thesis"];
+const types = typeOrder.filter((type) => projects.some((project) => project.data.type === type));
+---
+<Base title="Research — Samarth Uttam">
+  <div class="container">
+    <h1 class="statement">{research.statement}</h1>
+
+    <section class="row">
+      <h2 class="label">Research</h2>
+      <div class="blocks">
+        {research.blocks.map((block) => <IntroBlock {...block} />)}
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="row head">
+        <h2 class="label">All projects</h2>
+        <ProjectFilter types={types} />
+      </div>
+      <ProjectGrid projects={projects} />
+    </section>
+  </div>
+</Base>
+
+<style>
+  .statement {
+    margin: 96px 0 64px;
+    max-width: 24ch;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 300;
+    line-height: 1.1;
+  }
+  .row {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 24px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+  .label {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+  }
+  .projects {
+    margin-top: 120px;
+  }
+  .head {
+    align-items: baseline;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 800px) {
+    .statement {
+      margin: 56px 0 40px;
+    }
+    .row {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+  }
+</style>

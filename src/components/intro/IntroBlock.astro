@@ -1,0 +1,39 @@
+---
+interface Props {
+  label: string;
+  text: string | string[];
+  link?: { label: string; href: string };
+}
+const { label, text, link } = Astro.props;
+const paragraphs = Array.isArray(text) ? text : [text];
+---
+<div>
+  <h2>{label}</h2>
+  {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+  {link && <a href={link.href}>{link.label} ↗</a>}
+</div>
+
+<style>
+  h2 {
+    margin: 0 0 10px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+   p {
+    margin: 0 0 10px;
+    text-align: justify;
+    hyphens: auto;
+  }
+  @media (max-width: 640px) {
+    p { text-align: left; }
+  }
+  a {
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--text);
+    transition: opacity 0.2s;
+  }
+  a:hover { opacity: 0.4; }
+</style>

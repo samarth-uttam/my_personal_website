@@ -1,0 +1,63 @@
+---
+interface Props {
+  photo: { src: string; alt: string } | null;
+    facts: { label: string; value: string | string[] }[];
+}
+const { photo, facts } = Astro.props;
+---
+<aside>
+  {photo ? (
+    <img src={photo.src} alt={photo.alt} />
+  ) : (
+    <div class="placeholder" aria-hidden="true"></div>
+  )}
+  <dl>
+    {facts.map((fact) => (
+      <div>
+        <dt>{fact.label}</dt>
+               {(Array.isArray(fact.value) ? fact.value : [fact.value]).map((line) => (
+          <dd>{line}</dd>
+        ))}
+      </div>
+    ))}
+  </dl>
+</aside>
+
+<style>
+  img,
+  .placeholder {
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    filter: grayscale(1);
+  }
+  .placeholder {
+    background: var(--line);
+  }
+  dl {
+    display: grid;
+    gap: 16px;
+    margin: 24px 0 0;
+  }
+  dt {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  dd {
+    margin: 2px 0 0;
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 800px) {
+    img,
+    .placeholder {
+      max-width: 200px;
+    }
+    dl {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

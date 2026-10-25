@@ -1,1 +1,47 @@
-<section class="container" id="about">Intro</section>
+---
+import IntroFacts from "./IntroFacts.astro";
+import IntroBlock from "./IntroBlock.astro";
+import { intro } from "../../data/intro.js";
+---
+<section class="container" id="about">
+  <h1 class="statement">{intro.statement}</h1>
+  <div class="grid">
+    <IntroFacts photo={intro.photo} facts={intro.facts} />
+    <div class="blocks">
+      {intro.blocks.map((block) => <IntroBlock {...block} />)}
+    </div>
+  </div>
+</section>
+
+<style>
+  .statement {
+    margin: 96px 0 64px;
+    max-width: 24ch;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: 300;
+    line-height: 1.1;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 24px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+  .blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    /* max-width: 65ch; */
+  }
+
+  @media (max-width: 800px) {
+    .statement {
+      margin: 56px 0 40px;
+    }
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+</style>

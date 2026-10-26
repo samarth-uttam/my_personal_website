@@ -14,7 +14,9 @@ export const site = {
       { label: "LinkedIn", href: "https://www.linkedin.com/in/samarth-uttam/" },
       { label: "Google Scholar", href: "https://scholar.google.com/citations?user=k-uJhlAAAAAJ&hl=en&oi=ao" },
       { label: "ICD", href: "https://www.icd.uni-stuttgart.de/team/Uttam/" },
+      { label: "IntCDC", href: "hhttps://www.intcdc.uni-stuttgart.de/team/person/Uttam-00001/" },
       { label: "GitHub", href: "https://github.com/samarth-uttam" },
+
     ],
   },
   legal: [

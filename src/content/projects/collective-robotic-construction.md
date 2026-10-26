@@ -1,49 +1,26 @@
 ---
-title: "Material Hand-Offs between Climbing and Aerial Robots"
-summary: "Towards heterogeneity in collective robotic construction: passing material between robots with different capabilities."
+title: "Towards Heterogeneity in Collective Robotic Construction"
+summary: "Material Hand-Offs within a Team of Climbing and Aerial Robots"
 year: "2026"
 type: "Research"
+card:
+  src: "/images/ECAADE_handoff/Drone_robot_Card.png"
+  alt: "D-Shape Sync 2x4 printer"
 cover:
-  alt: "Climbing and aerial robots exchanging material"
+  src: "/images/ECAADE_handoff/Drone_robot_cover.png"
+  alt: "D-Shape Sync 2x4 printer"
 facts:
-  - label: "Role"
-    value: "…"
+
   - label: "Institution"
     value: ["Institute for Computational Design and Construction (ICD)", "University of Stuttgart"]
   - label: "Authors"
     value: "Xie, X., Uttam, S., Leder, S., Yuan, P. F., Menges, A."
   - label: "Published"
     value: "eCAADe 2026"
-  - label: "Tools"
-    value: "…"
-# links:
-#   - label: "Paper"
-#     href: "https://doi.org/…"
-gallery:
-  - title: "Concept"
-    text: "…"
-    images:
-      - caption: "…"
-      - caption: "…"
-  - title: "Robots"
-    text: "…"
-    images:
-      - caption: "…"
-      - caption: "…"
-  - title: "Results"
-    text: "…"
-    images:
-      - caption: "…"
+
+links:
+  - label: "Paper"
+    href: "https://papers.cumincad.org/data/works/att/ecaade2026_454.pdf"
+
 ---
 
-## Overview
-
-…
-
-## Approach
-
-…
-
-## Results
-
-…

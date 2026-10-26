@@ -2,9 +2,9 @@
 export const projectOrder = [
   "hdpe-pipe-extrusion",
   "collective-robotic-construction",
+  "curved-glass-handling",
   "d-shape",
   "precision-microdrives",
-  "curved-glass-handling",
   "loomo-navigation",
   "pipe-inspection-robot",
   "blood-electrolyte-reader",
@@ -17,6 +17,5 @@ export const featuredOrder = [
   "collective-robotic-construction",
   "curved-glass-handling",
   "d-shape",
-  "loomo-navigation",
-  "precision-microdrives",
+
 ];

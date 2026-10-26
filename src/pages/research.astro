@@ -1,13 +1,12 @@
 ---
-import type { CollectionEntry } from "astro:content";
 import Base from "../layouts/Base.astro";
 import IntroBlock from "../components/intro/IntroBlock.astro";
 import ProjectGrid from "../components/projects/ProjectGrid.astro";
 import ProjectFilter from "../components/projects/ProjectFilter.astro";
 import { research } from "../data/research.js";
-import { getAllProjects } from "../lib/projects";
+import { getAllProjects } from "../lib/projects.js";
 
-const projects: CollectionEntry<"projects">[] = await getAllProjects();
+const projects = await getAllProjects();
 const typeOrder = ["Research", "Academic", "Industry", "Thesis"];
 const types = typeOrder.filter((type) => projects.some((project) => project.data.type === type));
 ---

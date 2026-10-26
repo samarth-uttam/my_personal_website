@@ -20,13 +20,24 @@ facts:
     value: "SolidWorks · FEA · GD&T · DFMEA · Arduino · Python"
 
 
+
 gallery:
-  - title: "Fixtures"
-    text: "Jigs and fixtures for the assembly process."
+  - title: "Fixtures and Testing Mechanisms"
+    text: "Jigs, fixtures and Arduino-based testers for a production line, from design to validation."
+
     images:
-      - caption: "…"
-      - caption: "…"
-  
+        - src: "/images/PMD/_Card/6.png"
+          caption: "Image 1 - Motor testing  "
+
+        - src: "/images/PMD/_Card/7.png"
+          caption: "Image 2 - Probing Mehcnism for current leakage detection (prototype) "
+     
+
+        - src: "/images/PMD/_Card/8.png"
+          caption: "Image 3 - Probing Mehcnism for current leakage detection"
+     
+        - src: "/images/PMD/_Card/9.png"
+          caption: "Image 4 - Current leakage in a motor test rig"
 ---
 
 ## Overview

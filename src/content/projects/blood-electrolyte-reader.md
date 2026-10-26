@@ -1,33 +1,26 @@
 ---
-title: "Quantum Dot Films and an Optical Reader for Blood Electrolytes"
+title: "Design and Development of Quantum Dots Infused Films and an Optical Reader for Measurement of Blood Electrolytes"
 summary: "Measuring blood electrolytes with quantum-dot-infused films and a purpose-built optical reader."
 year: "2019"
 type: "Research"
+
+
+card:
+  src: "/images/iitb/Cover.png"
+  alt: "publication"
 cover:
-  alt: "Optical reader prototype"
+  src: "/images/iitb/Cover.png"
+  alt: "publication"
 facts:
-  - label: "Role"
-    value: "…"
+
   - label: "Authors"
     value: "Shivhare, P., Aliya, S., Mohla, S., Uttam, S., Srivastava, R."
   - label: "Published"
     value: "IEEE 2019"
-  - label: "Tools"
-    value: "…"
-# links:
-#   - label: "Paper"
-#     href: "https://doi.org/…"
-gallery:
-  - title: "Prototype"
-    text: "…"
-    images:
-      - caption: "…"
+
+links:
+  - label: "Paper"
+    href: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9084002"
+
 ---
 
-## Overview
-
-…
-
-## Approach
-
-…

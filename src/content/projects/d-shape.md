@@ -3,6 +3,7 @@ title: "Printer Structures and Slicing Software for Selective Cement Activation 
 summary: "Lightweight modular trusses and print control for the D-Shape Sync 2x4 large-scale 3D printer."
 year: "2025"
 type: "Industry"
+
 card:
   src: "/images/D-shape/D-shape_Card.png"
   alt: "D-Shape Sync 2x4 printer"
@@ -11,6 +12,8 @@ cover:
   alt: "D-Shape Sync 2x4 printer"
   credit:
     - "Original Model Photo: D-shape Ltd. Hong Kong"
+
+    
 facts:
   - label: "Role"
     value: "Software Engineer"

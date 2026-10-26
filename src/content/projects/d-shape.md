@@ -3,9 +3,14 @@ title: "Printer Structures and Slicing Software for Selective Cement Activation"
 summary: "Lightweight modular trusses and print control for the D-Shape Sync 2x4 large-scale 3D printer."
 year: "2025"
 type: "Industry"
-cover:
+card:
   src: "/images/D-shape/cover_img.png"
-  alt: "Extrusion unit prototype"
+  alt: "D-Shape Sync 2x4 printer"
+cover:
+  src: "/images/D-shape/img_1.png"
+  alt: "D-Shape Sync 2x4 printer"
+  # credit:
+  #   - "Photo: …"
 facts:
   - label: "Role"
     value: "Software Engineer"
@@ -18,28 +23,19 @@ facts:
   - label: "Tools"
     value: "…"
 gallery:
-
   - title: "Setup"
     text: "Extruder with test bench"
     images:
       - src: "/images/D-shape/img_2.png"
-        # credit:
-        #   - "Photo: ICD, Universität Stuttgart, Germany and STRABAG AG"
-        #   - "Samarth Uttam, Philipp Kragl, Matthew Johnson"
         caption: "Slicer"
+        # credit:
+        #   - "Photo: …"
 
-      # - src: "/images/hdpe-pipe-extrusion/image2.png"
-      #   credit:
-      #     - "Photo: ICD, Universität Stuttgart, Germany and STRABAG AG"
-      #     - "Samarth Uttam, Philipp Kragl, Matthew Johnson"
-      #   caption: "HDPE through extruder"
+      # - src: "/images/D-shape/img_3.png"
+      #   caption: "…"
 
-      # - src: "/images/hdpe-pipe-extrusion/image3.png"
-      #   credit:
-      #     - "Photo: ICD, Universität Stuttgart, Germany and STRABAG AG"
-      #     - "Samarth Uttam, Philipp Kragl, Matthew Johnson"
-      #   caption: "Molten HDPE"
-        
+      # - src: "/images/D-shape/img_4.png"
+      #   caption: "…"
 ---
 ## Overview
 

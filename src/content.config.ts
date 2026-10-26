@@ -11,6 +11,7 @@ const projects = defineCollection({
     summary: z.string(),
     year: z.string(),
     type: z.enum(["Research", "Academic", "Industry", "Thesis"]),
+    card: z.object({ src: z.string().optional(), alt: z.string() }).optional(),
     cover: z
       .object({ src: z.string().optional(), alt: z.string(), credit })
       .optional(),

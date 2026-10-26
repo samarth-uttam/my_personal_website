@@ -6,12 +6,13 @@ interface Props {
   number: number;
 }
 const { project, number } = Astro.props;
-const { title, summary, year, type, cover } = project.data;
+const { title, summary, year, type, card, cover } = project.data;
+const image = card ?? cover;
 const label = String(number).padStart(2, "0");
 ---
 <a class="card" href={`/research/${project.id}`} data-type={type}>
-  {cover?.src ? (
-    <img src={cover.src} alt={cover.alt} loading="lazy" />
+  {image?.src ? (
+    <img src={image.src} alt={image.alt} loading="lazy" />
   ) : (
     <div class="placeholder" aria-hidden="true"></div>
   )}

@@ -4,7 +4,8 @@ summary: "Lightweight modular trusses and print control for the D-Shape Sync 2x4
 year: "2025"
 type: "Industry"
 cover:
-  alt: "D-Shape Sync 2x4 printer"
+  src: "/images/D-shape/cover_img.png"
+  alt: "Extrusion unit prototype"
 facts:
   - label: "Role"
     value: "Software Engineer"
@@ -17,18 +18,29 @@ facts:
   - label: "Tools"
     value: "…"
 gallery:
-  - title: "Mechanical design"
-    text: "Lightweight modular aluminium trusses and systems for precise layer deposition."
-    images:
-      - caption: "…"
-      - caption: "…"
-  - title: "Software"
-    text: "Slicing software and printer control with dynamic resolution and optimised nozzle operation."
-    images:
-      - caption: "…"
-      - caption: "…"
----
 
+  - title: "Setup"
+    text: "Extruder with test bench"
+    images:
+      - src: "/images/D-shape/img_2.png"
+        # credit:
+        #   - "Photo: ICD, Universität Stuttgart, Germany and STRABAG AG"
+        #   - "Samarth Uttam, Philipp Kragl, Matthew Johnson"
+        caption: "Slicer"
+
+      # - src: "/images/hdpe-pipe-extrusion/image2.png"
+      #   credit:
+      #     - "Photo: ICD, Universität Stuttgart, Germany and STRABAG AG"
+      #     - "Samarth Uttam, Philipp Kragl, Matthew Johnson"
+      #   caption: "HDPE through extruder"
+
+      # - src: "/images/hdpe-pipe-extrusion/image3.png"
+      #   credit:
+      #     - "Photo: ICD, Universität Stuttgart, Germany and STRABAG AG"
+      #     - "Samarth Uttam, Philipp Kragl, Matthew Johnson"
+      #   caption: "Molten HDPE"
+        
+---
 ## Overview
 
 Development and optimisation of the D-Shape Sync 2x4 printer's structural systems, and of the slicing software and control algorithms behind its Selective Cement Activation (SCA) process.

@@ -2,6 +2,8 @@ import { defineCollection } from "astro:content";
 import { glob } from "astro/loaders";
 import { z } from "astro/zod";
 
+const credit = z.union([z.string(), z.array(z.string())]).optional();
+
 const projects = defineCollection({
   loader: glob({ pattern: "*.md", base: "./src/content/projects" }),
   schema: z.object({
@@ -9,7 +11,9 @@ const projects = defineCollection({
     summary: z.string(),
     year: z.string(),
     type: z.enum(["Research", "Academic", "Industry", "Thesis"]),
-    cover: z.object({ src: z.string().optional(), alt: z.string() }).optional(),
+    cover: z
+      .object({ src: z.string().optional(), alt: z.string(), credit })
+      .optional(),
     facts: z
       .array(z.object({ label: z.string(), value: z.union([z.string(), z.array(z.string())]) }))
       .default([]),
@@ -20,7 +24,9 @@ const projects = defineCollection({
         z.object({
           title: z.string(),
           text: z.string().optional(),
-          images: z.array(z.object({ src: z.string().optional(), caption: z.string() })),
+          images: z.array(
+            z.object({ src: z.string().optional(), caption: z.string(), credit })
+          ),
         })
       )
       .default([]),

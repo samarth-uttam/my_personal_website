@@ -2,9 +2,12 @@
 interface Props {
   title: string;
   summary: string;
-  cover?: { src?: string; alt: string };
+  cover?: { src?: string; alt: string; credit?: string | string[] };
 }
 const { title, summary, cover } = Astro.props;
+const credit = cover?.credit
+  ? Array.isArray(cover.credit) ? cover.credit : [cover.credit]
+  : [];
 ---
 <div class="head">
   <a class="back" href="/research">← All projects</a>
@@ -14,6 +17,11 @@ const { title, summary, cover } = Astro.props;
     <img src={cover.src} alt={cover.alt} />
   ) : (
     <div class="placeholder" aria-hidden="true"></div>
+  )}
+  {credit.length > 0 && (
+    <p class="credit">
+      {credit.map((line) => <span>{line}</span>)}
+    </p>
   )}
 </div>
 
@@ -31,22 +39,33 @@ const { title, summary, cover } = Astro.props;
   }
   h1 {
     margin: 40px 0 12px;
-    max-width: 24ch;
     font-size: clamp(2rem, 4.5vw, 3.5rem);
     font-weight: 300;
     line-height: 1.1;
   }
   .summary {
     margin: 0 0 48px;
-    max-width: 60ch;
     font-size: 1.15rem;
     color: var(--muted);
   }
   img,
   .placeholder {
+    display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
-    object-fit: cover;
+  }
+  img {
+    object-fit: contain;
+  }
+  .placeholder {
     background: var(--line);
+  }
+  .credit {
+    margin: 8px 0 0;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  .credit span {
+    display: block;
   }
 </style>

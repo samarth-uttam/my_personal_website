@@ -24,7 +24,7 @@ export const intro = {
     },
     {
       label: "Now",
-      text: "Working on : AP55 - Autonomous Manufacturing of Integrative Services at Institute for Computational Design and Construction (ICD) University of Stuttgart focussing on Fabrication of Integrated Services: Robotic Construction (CRC) for On-Site Production and Installation of Building Systems in Construction and Infrastructure  " ,
+      text: "Working on : AP55 - Autonomous Manufacturing of Integrative Services at Institute for Computational Design and Construction (ICD) University of Stuttgart focussing on Fabrication of Integrated Services: Robotic Construction for On-Site Production and Installation of Building Systems in Construction and Infrastructure. " ,
       // link: { label: "Project", href: "/research/hdpe-pipe-extrusion" },
     },
     {

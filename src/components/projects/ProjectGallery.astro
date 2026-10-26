@@ -1,10 +1,17 @@
 ---
 import ProjectRow from "./ProjectRow.astro";
 
+type Credit = string | string[] | undefined;
+
 interface Props {
-  groups: { title: string; text?: string; images: { src?: string; caption: string }[] }[];
+  groups: {
+    title: string;
+    text?: string;
+    images: { src?: string; caption: string; credit?: string | string[] }[];
+  }[];
 }
 const { groups } = Astro.props;
+const creditLines = (credit: Credit) => (credit ? (Array.isArray(credit) ? credit : [credit]) : []);
 ---
 {groups.map((group) => (
   <ProjectRow label={group.title}>
@@ -17,6 +24,7 @@ const { groups } = Astro.props;
             data-lightbox
             data-src={image.src}
             data-caption={image.caption}
+            data-credit={creditLines(image.credit).join("\n") || undefined}
             aria-label={`Open image: ${image.caption}`}
           >
             {image.src ? (
@@ -25,7 +33,12 @@ const { groups } = Astro.props;
               <span class="placeholder"></span>
             )}
           </button>
-          <figcaption>{image.caption}</figcaption>
+          <figcaption>
+            {image.caption}
+            {creditLines(image.credit).map((line) => (
+              <span class="credit">{line}</span>
+            ))}
+          </figcaption>
         </figure>
       ))}
     </div>
@@ -57,9 +70,13 @@ const { groups } = Astro.props;
     display: block;
     width: 100%;
     aspect-ratio: 4 / 3;
-    object-fit: cover;
-    background: var(--line);
     transition: opacity 0.2s;
+  }
+  img {
+    object-fit: contain;
+  }
+  .placeholder {
+    background: var(--line);
   }
   button:hover img,
   button:hover .placeholder {
@@ -69,5 +86,11 @@ const { groups } = Astro.props;
     margin-top: 8px;
     font-size: 0.85rem;
     color: var(--muted);
+  }
+  .credit {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.75rem;
+    opacity: 0.8;
   }
 </style>

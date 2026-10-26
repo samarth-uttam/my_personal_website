@@ -3,6 +3,7 @@
     <img alt="" />
     <div class="placeholder"></div>
     <figcaption></figcaption>
+    <p class="credit"></p>
   </figure>
   <button class="prev" type="button" aria-label="Previous image">‹</button>
   <button class="next" type="button" aria-label="Next image">›</button>
@@ -17,11 +18,12 @@
     const img = box.querySelector("img")!;
     const placeholder = box.querySelector<HTMLElement>(".placeholder")!;
     const caption = box.querySelector("figcaption")!;
+    const credit = box.querySelector<HTMLElement>(".credit")!;
     let current = 0;
 
     const show = (index: number) => {
       current = (index + thumbs.length) % thumbs.length;
-      const { src, caption: text = "" } = thumbs[current].dataset;
+      const { src, caption: text = "", credit: creditText } = thumbs[current].dataset;
       img.hidden = !src;
       placeholder.hidden = Boolean(src);
       if (src) {
@@ -29,6 +31,8 @@
         img.alt = text;
       }
       caption.textContent = `${text} · ${current + 1} / ${thumbs.length}`;
+      credit.textContent = creditText ?? "";
+      credit.hidden = !creditText;
     };
 
     const open = (index: number) => {
@@ -94,7 +98,7 @@
   img {
     display: block;
     max-width: 90vw;
-    max-height: 80vh;
+    max-height: 78vh;
     object-fit: contain;
   }
   .placeholder {
@@ -106,6 +110,12 @@
     margin-top: 12px;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.7);
+  }
+  .credit {
+    margin: 6px 0 0;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5);
+    white-space: pre-line;
   }
   button {
     position: absolute;

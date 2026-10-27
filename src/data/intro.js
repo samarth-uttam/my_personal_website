@@ -1,6 +1,6 @@
 export const intro = {
   statement:
-    "A mechanical engineer working on robotic fabrication for construction",
+    "A mechanical engineer working on robotic fabrication of on-site production of service infrastructure",
 
   // Once the photo is in public/images/, replace null with:
   // { src: "/images/portrait.jpg", alt: "Portrait of Samarth Uttam" }

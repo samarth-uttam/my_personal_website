@@ -18,7 +18,7 @@ export const intro = {
     {
       label: "About",
       text: [
-        "Hi, I am samarth and I am a mechanical engineer and research associate at the Institute for Computational Design and Construction (ICD), University of Stuttgart. My work bridges mechanical systems, digital fabrication, and robotics—focusing on the design, engineering, and full-scale testing of hardware and process tooling that physical robotic construction relies on.",
+        "Hi, I am samarth, a mechanical engineer and research associate at the Institute for Computational Design and Construction (ICD), University of Stuttgart. My work bridges mechanical systems, digital fabrication, and robotics,focusing on the design, engineering, and full-scale testing of hardware and process tooling that physical robotic construction relies on.",
         "Before Stuttgart, I spent six years in Hong Kong. At HKUST, I completed an MSc and an MPhil, working on robot navigation and the  handling of large curved glass sheets. I then moved to industry, designing assembly fixtures and test systems at Precision Microdrives, and printer structures and slicing software at D-Shape.",
       ],
     },

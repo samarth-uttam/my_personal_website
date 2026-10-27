@@ -1,7 +1,48 @@
 export const cv = {
   pdf: null,
   sections: [
+   
     {
+      title: "Professional Positions",
+      entries: [
+
+        {
+          years: "2025 – current",
+          title: "Research Associate",
+          org: "Institute for Computational Design and Construction (ICD), University of Stuttgart",
+          location: "Stuttgart, Germany",
+          note: [
+            "Project: Autonomous Manufacturing of Integrative Services",
+            "· Heating module and die assembly for a compact HDPE pipe extrusion unit for robotic underground construction",
+          ],
+          links: [{ label: "Project", href: "/research/hdpe-pipe-extrusion" }],
+        },
+        {
+          years: "2025",
+          title: "Software Engineer",
+          org: "D-Shape Limited · Research Talent Hub @ HKSTP",
+          location: "Hong Kong",
+          note: [
+            "· Structural systems of the D-Shape Sync 2x4 printer: lightweight modular aluminium trusses",
+            "· Slicing software and printer control for the Selective Cement Activation (SCA) process",
+          ],
+          links: [{ label: "Project", href: "/research/d-shape" }],
+        },
+        {
+          years: "2022–2024",
+          title: "Industrial Engineer",
+          org: "Precision Microdrives Ltd.",
+          location: "Hong Kong",
+          note: [
+            "· Assembly jigs and fixtures using CAD, FEA and GD&T",
+            "· Arduino-based test systems with Python interfaces",
+            "· Validation, GR&R studies and IQ/OQ/PQ documentation",
+          ],
+        },
+      ],
+    },
+
+     {
       title: "Education",
       entries: [
         {
@@ -37,46 +78,9 @@ export const cv = {
       ],
     },
     {
-      title: "Professional Positions",
+      title: "Internships",
       entries: [
-        {
-          years: "2025",
-          title: "Software Engineer",
-          org: "D-Shape Limited · Research Talent Hub @ HKSTP",
-          location: "Hong Kong",
-          note: [
-            "· Structural systems of the D-Shape Sync 2x4 printer: lightweight modular aluminium trusses",
-            "· Slicing software and printer control for the Selective Cement Activation (SCA) process",
-          ],
-          links: [{ label: "Project", href: "/research/d-shape" }],
-        },
-        {
-          years: "2022–2024",
-          title: "Industrial Engineer",
-          org: "Precision Microdrives Ltd.",
-          location: "Hong Kong",
-          note: [
-            "· Assembly jigs and fixtures using CAD, FEA and GD&T",
-            "· Arduino-based test systems with Python interfaces",
-            "· Validation, GR&R studies and IQ/OQ/PQ documentation",
-          ],
-        },
-      ],
-    },
-    {
-      title: "Academic Positions",
-      entries: [
-        {
-          years: "2025 – current",
-          title: "Research Associate",
-          org: "Institute for Computational Design and Construction (ICD), University of Stuttgart",
-          location: "Stuttgart, Germany",
-          note: [
-            "Project: Autonomous Manufacturing of Integrative Services",
-            "· Heating module and die assembly for a compact HDPE pipe extrusion unit for robotic underground construction",
-          ],
-          links: [{ label: "Project", href: "/research/hdpe-pipe-extrusion" }],
-        },
+        
         {
           years: "2019",
           title: "Research Intern",
